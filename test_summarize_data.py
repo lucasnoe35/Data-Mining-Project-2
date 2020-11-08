@@ -45,16 +45,14 @@ def test_buy_or_sell1():
     # Test the function buy_or_sell's dataframe says 'BUY'
     # when the closing cost is below the upper Bollinger Band
     assert str(buy_or_sell(sort_data('MSFT'),
-               'MSFT').iloc[0][[2]]) == 'Buy/Sell    BUY\nName:\
-                    0, dtype: object'
+               'MSFT').iloc[0][[2]]) == 'Buy/Sell    BUY\nName:0, dtype: object'
 
 
 def test_buy_or_sell2():
     # Test the function buy_or_sell's dataframe says 'SELL'
     # when the closing cost is above the upper Bollinger Band
     assert str(buy_or_sell(sort_data('MSFT'),
-               'MSFT').iloc[72][[2]]) == 'Buy/Sell    SELL\nName:\
-                   72, dtype: object'
+               'MSFT').iloc[72][[2]]) == 'Buy/Sell    SELL\nName:72, dtype: object'
 
 
 def test_buy_or_sell3():
@@ -62,5 +60,4 @@ def test_buy_or_sell3():
     # when the closing cost is between the upper and lower
     # Bollinger Bands
     assert str(buy_or_sell(sort_data('MSFT'),
-               'MSFT').iloc[1][[2]]) == 'Buy/Sell    N/A\nName:\
-                    1, dtype: object'
+               'MSFT').iloc[1][[2]]) == 'Buy/Sell    N/A\nName:1, dtype: object'
